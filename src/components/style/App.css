@@ -1,0 +1,29 @@
+.btn_div {
+  display: flex;
+  justify-content: center;
+}
+
+.btn1 {
+  padding: 0.6em 4em;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #c99146;
+  color: #746447;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 1em;
+}
+
+.more {
+  padding: 0.6em 4em;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border-style: solid;
+  background-color: #eab676;
+  color: #746447;
+  border-color: #eab676;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 1em;
+}

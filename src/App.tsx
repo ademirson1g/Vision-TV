@@ -1,8 +1,9 @@
 import React from "react";
+import Button from "./components/atoms/Button";
 import "./App.css";
 
 function App() {
-  return <div className="App">Hello</div>;
+  return <Button />;
 }
 
 export default App;
