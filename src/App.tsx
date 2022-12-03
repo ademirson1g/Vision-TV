@@ -1,9 +1,10 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Header from "./components/atoms/Header";
+import Header from "./components/atoms/Header/Header";
 import Home from "./components/atoms/Home/Home";
 import "./App.css";
+import MovieList from "./components/atoms/MovieList/MoveList";
+import MovieDetail from "./components/atoms/MovieDetail/MovieDetail";
 
 function App() {
   return (
@@ -17,11 +18,11 @@ function App() {
           ></Route>
           <Route
             path="movie/:id"
-            element={<h1 style={{ color: "white" }}>Movie detail page</h1>}
+            element={<h1 style={{ color: "white" }}>{<MovieDetail />}</h1>}
           ></Route>
           <Route
             path="movies/:type"
-            element={<h1 style={{ color: "white" }}>Movie List page</h1>}
+            element={<h1 style={{ color: "white" }}>{< MovieList />}</h1>}
           ></Route>
           <Route
             path="/*"
