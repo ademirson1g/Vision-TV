@@ -2,9 +2,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/atoms/Header/Header";
 import Home from "./components/atoms/Home/Home";
-import "./App.css";
 import MovieList from "./components/atoms/MovieList/MoveList";
 import MovieDetail from "./components/atoms/MovieDetail/MovieDetail";
+
+import "./App.css";
 
 function App() {
   return (

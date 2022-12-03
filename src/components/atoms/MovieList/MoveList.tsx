@@ -1,9 +1,11 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import { useAxios } from '../../hooks/useAxios';
-import '../../style/MovieList.css'
+
 import Cards from '../Card/Card'
-  
+
+import '../../style/MovieList.css'
+
 export interface IJsonResposne {
     results: IMovieData[];
     page: number;

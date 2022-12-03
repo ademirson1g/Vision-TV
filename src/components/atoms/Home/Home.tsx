@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from 'react-responsive-carousel'
 
-import "../../style/App.css";
-import "../../style/Home.css";
 import MovieList from "../MovieList/MoveList";
 
 import { FaStar } from 'react-icons/fa'
 import { MdOutlineDateRange } from 'react-icons/md'
+
+import "../../style/App.css";
+import "../../style/Home.css";
 
 export interface IJsonResposne {
   results: IMovieData[];
