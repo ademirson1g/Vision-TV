@@ -1,72 +1,105 @@
 import React , {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
-import { useAxios } from '../../hooks/useAxios';
 
 import "../../style/MovieDetail.css"
 
-export interface IJsonResposne {
-    results: IMovieData[];
-    page: number;
-  }
+import VideoList from '../VideoList/VideoList';
 
-  export interface IMovieData {
-    id:string;
-    poster_path: string;
-    original_title: string;
-    original_language: string;
-    overview: string;
-    release_date: number;
-    vote_average: number;
-    backdrop_path: string;
-  }
+const MovieDetail: React.FunctionComponent = () => {
+    const [movieDetail, setMovie] = useState<any[]>([])
 
-const MovieDetail = () => {
-    const [currentMovieDetail, setMovie] = useState()
-    const { id, type} = useParams()
+  const { id } = useParams();
 
-    const [loading, data, error, request] = useAxios<IJsonResposne>({
-        method: "GET",
-        url: `https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=18efa1c884796c304e2b89592f48fa10&language=en-US&page=1`,
-      });
-    
-      if (loading) return <p>Loading ....</p>;
-    
-      if (error !== "") return <p>{error}</p>;
-    
-      if (!data) return <p>Data was null</p>;
+  useEffect(() => {
+    getData();
+    window.scrollTo(0, 0);
+  }, []);
 
-    return (
-        <div className="movie">
-             {data.results.map(movie => (
-            <div className="movie__intro">
-                <img className="movie__backdrop" src={`https://image.tmdb.org/t/p/original${movie ? movie.backdrop_path : ""}`} />
-            <div className="movie__detail">
-                <div className="movie__detailLeft">
-                    <div className="movie__posterBox">
-                        <img className="movie__poster" src={`https://image.tmdb.org/t/p/original${movie ? movie.poster_path : ""}`} />
-                    </div>
-                </div>
-                
-                <div className="movie__detailRight">
-                    <div className="movie__detailRightTop">
-                        <div className="movie__name">{movie ? movie.original_title : ""}</div>
-                        <div className="movie__rating">
-                            {movie ? movie.vote_average: ""} <i className="fas fa-star" />
-                        </div>  
-                        <div className="movie__releaseDate">{movie ? "Release date: " + movie.release_date : ""}</div>
-                    </div>
-                    <div className="movie__detailRightBottom">
-                        <div className="synopsisText">Synopsis</div>
-                        <div>{movie ? movie.overview : ""}</div>
-                    </div>
-                    
-                </div>
-            </div>
-            <div className="movie__heading">Production companies</div>
-        </div>
-            ))}
-        </div>
+  const getData = () => {
+    fetch(
+      `https://api.themoviedb.org/3/movie/${id}?api_key=15adc4cf6388a9d835667a7400191617&language=en-US`
     )
-}
+      .then((res) => res.json())
+      .then((data) => setMovie(data));
+  };
+
+  return (
+    <>
+      {movieDetail && (
+        <>
+            {/* Background path */}
+          <div
+            className="banner"
+            style={{
+              backgroundImage: `url("https://image.tmdb.org/t/p/original${
+                movieDetail ? movieDetail['backdrop_path'] : ''
+              }")`
+            }}
+          ></div>
+
+          <div 
+            className="movie-content" 
+            style={{marginBottom:"5px"}}>
+            <div className="movie-content__poster">
+              <div
+                className="movie-content__poster__img"
+                style={{
+                  backgroundImage: `url("https://image.tmdb.org/t/p/w500${
+                    movieDetail ? movieDetail["poster_path"] : ''
+                  }")`,
+                }}
+              >
+              </div>
+            </div>
+            
+            <div className="movie-content__info">
+              <h1 className="title">
+                {movieDetail ? movieDetail["original_title"] : ''}
+              </h1>
+
+              <div className="genres">
+                {movieDetail["genres"] &&
+                  movieDetail["genres"].slice(0, 5).map((genre, i) => (
+                    <span key={i} className="genres__item">
+                      {genre.name}
+                    </span>
+                  ))}
+              </div>
+
+              <div className="movie__tagline">
+                {movieDetail ? movieDetail["tagline"] : ''}
+              </div>
+
+              <div className="movie__rating">
+                {movieDetail ? movieDetail["vote_average"] : ''}{' '}
+                <i className="fas fa-star" />
+                <span className="movie__voteCount">
+                  {movieDetail ? '(' + movieDetail["vote_count"] + ') votes' : ''}
+                </span>
+              </div>
+
+              <div className="movie__runtime">
+                {movieDetail ? movieDetail["runtime"] + ' mins' : ''}
+              </div>
+
+              <div className="movie__releaseDate">
+                {movieDetail ? 'Release date:' + movieDetail["release_date"] : ''}
+              </div>
+
+              <div className="movie-overview">
+                <h1 style={{fontSize: '15px'}}>Overview</h1>
+                <p className="overview">{movieDetail["overview"]}</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <VideoList />
+          </div>
+        </>
+      )}
+    </>
+  );
+};
 
 export default MovieDetail

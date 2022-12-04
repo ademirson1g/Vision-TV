@@ -1,0 +1,128 @@
+.banner {
+    height: 50vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to top, #0f0f0f, rgba(0, 0, 0, 0));
+}
+
+.movie-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -200px;
+    position: relative;
+    padding: 0 2rem;
+    font-size: 20px;
+    font-family: 'Open Sans';
+}
+
+.movie-content__poster {
+    flex: 1 1;
+}
+
+.movie-content__poster__img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    padding-top: 165%;
+}
+
+.movie-content__info {
+    width: 70%;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.movie-content__info .title {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.movie-content__info .genres__item {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: #0f0f0f;
+}
+
+.movie-content__info > * {
+    margin-bottom: 2rem;
+}
+
+.movie__voteCount {
+  margin-left: 1rem;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 1024px){
+  .movie-content__poster {
+    flex: 0;
+  }
+
+  .movie-content__info .title {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .movie-content__info {
+    width: 100%;
+    padding: 0;
+  }
+
+  .movie-content {
+    padding: 0 1rem;
+  }
+
+  .movie-content__info .genres__item {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
+    margin: 2px;
+  }
+
+  .overview{
+    font-size:15px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

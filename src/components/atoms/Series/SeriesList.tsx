@@ -2,10 +2,8 @@ import React from 'react'
 import { useParams } from 'react-router-dom';
 import { useAxios } from '../../hooks/useAxios';
 
-import Cards from '../Card/Card'
-import Search from '../Search/Search'
-
 import '../../style/MovieList.css'
+import SeriesCard from './Series';
 
 export interface IJsonResposne {
     results: IMovieData[];
@@ -26,7 +24,7 @@ export interface IJsonResposne {
     const {type} = useParams()
     const [loading, data, error, request] = useAxios<IJsonResposne>({
         method: "GET",
-        url: `https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=18efa1c884796c304e2b89592f48fa10&language=en-US&page=1`,
+        url: `https://api.themoviedb.org/3/tv/${type ? type : "popular"}?api_key=18efa1c884796c304e2b89592f48fa10&language=en-US&page=1`,
       });
     
       if (loading) return <p>Loading ....</p>;
@@ -39,7 +37,7 @@ export interface IJsonResposne {
         <div className='movie__list'>
         <h2 className='list__title'>{(type ? type : "Popular").toUpperCase()}</h2>
         <div className='list__cards'>
-          <Cards />
+          <SeriesCard />
         </div>
     </div>
       )

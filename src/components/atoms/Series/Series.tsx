@@ -18,7 +18,7 @@ export interface IJsonResposne {
     original_title: string;
     original_language: string;
     overview: string;
-    release_date: number;
+    first_air_date: number;
     vote_average: number;
   }
 
@@ -27,11 +27,11 @@ export interface IJsonResposne {
   }
 
 
-const Cards: React.FunctionComponent<IAuthRouteProps> = (props) => {
+const SeriesCard: React.FunctionComponent<IAuthRouteProps> = (props) => {
     const { movie } = props;
     const [loading, data, error, request] = useAxios<IJsonResposne>({
         method: "GET",
-        url: "https://api.themoviedb.org/3/movie/top_rated?api_key=18efa1c884796c304e2b89592f48fa10&language=en-US&page=1",
+        url: "https://api.themoviedb.org/3/tv/popular?api_key=18efa1c884796c304e2b89592f48fa10&language=en-US&page=1",
       });
     
       if (loading) return <p>Loading ....</p>;
@@ -47,14 +47,16 @@ const Cards: React.FunctionComponent<IAuthRouteProps> = (props) => {
                 <SkeletonTheme highlightColor="#444">
                     <Skeleton height={300} duration={2} />
                 </SkeletonTheme>
-                <Link to={`/movie/${movie.id}`} style={{textDecoration:"none", color:"white"}}>
+                <Link to={`/tv/${movie.id}`} style={{textDecoration:"none", color:"white"}}>
                 <div className="cards">
                     <img className="cards__img" src={'https://image.tmdb.org/t/p/original' + movie.poster_path} alt="Card Image" />
                     <div className="cards__overlay">
                         <div className="card__title">{movie.original_title}</div>
                         <div className="card__runtime">
-                            {movie?movie.release_date:""}
-                            <span className="card__rating">{movie?movie.vote_average:""}<i className="fas fa-star" /> <FaStar style={{color:"yellow"}} /></span>
+                            {movie?movie.first_air_date:""}
+                            <span className="card__rating">{movie?movie.vote_average:""}<i className="fas fa-star" /> 
+                                <FaStar style={{color:"yellow"}} />
+                            </span>
                         </div>
                         <div className="card__description">{movie ? movie.overview.slice(0,118)+"..." : ""}</div>
                     </div>
@@ -68,4 +70,4 @@ const Cards: React.FunctionComponent<IAuthRouteProps> = (props) => {
 
    
 
-export default Cards;
+export default SeriesCard;

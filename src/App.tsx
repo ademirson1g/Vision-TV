@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+// Components imports
 import Header from "./components/atoms/Header/Header";
 import Home from "./components/atoms/Home/Home";
 import MovieList from "./components/atoms/MovieList/MoveList";
 import MovieDetail from "./components/atoms/MovieDetail/MovieDetail";
-
-import "./App.css";
+import SeriesList from "./components/atoms/Series/SeriesList";
 
 function App() {
   return (
@@ -20,6 +20,10 @@ function App() {
           <Route
             path="movie/:id"
             element={<h1 style={{ color: "white" }}>{<MovieDetail />}</h1>}
+          ></Route>
+           <Route
+            path="tv/:id"
+            element={<h1 style={{ color: "white" }}>{<SeriesList />}</h1>}
           ></Route>
           <Route
             path="movies/:type"
