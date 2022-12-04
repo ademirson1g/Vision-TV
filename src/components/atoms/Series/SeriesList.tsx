@@ -20,7 +20,7 @@ export interface IJsonResposne {
     vote_average: number;
   }
 
-  const MovieList: React.FunctionComponent = () => {
+  const SeriesList: React.FunctionComponent = () => {
     const {type} = useParams()
     const [loading, data, error, request] = useAxios<IJsonResposne>({
         method: "GET",
@@ -43,4 +43,4 @@ export interface IJsonResposne {
       )
 }
 
-export default MovieList
+export default SeriesList

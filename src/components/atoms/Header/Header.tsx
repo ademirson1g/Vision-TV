@@ -17,7 +17,7 @@ const Header:React.FunctionComponent = () => {
         <Link to="/movies/popular" style={{ textDecoration: "none" }}>
           <span>Popular Movies</span>
         </Link>
-        <Link to="/tv/top_rated" style={{ textDecoration: "none" }}>
+        <Link to="/tvs/top_rated" style={{ textDecoration: "none" }}>
           <span>Popular Tv Shows</span>
         </Link>
       </div>

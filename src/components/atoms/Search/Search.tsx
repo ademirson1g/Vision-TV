@@ -2,9 +2,8 @@ import React,{useState,useEffect} from 'react';
 import {Link} from 'react-router-dom';
 
 import '../../style/Search.css'
-import Cards from '../Card/Card';
 
-const Form: React.FunctionComponent = () => {
+const Search: React.FunctionComponent = () => {
 
     const [movieSearch, setMovieSearch] = useState([]);    
     const [query, setQuery] = useState("");    
@@ -51,4 +50,4 @@ const Form: React.FunctionComponent = () => {
     );
 }
 
-export default Form;
+export default Search;

@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import { useAxios } from '../../hooks/useAxios';
 
 import Cards from '../Card/Card'
-import Search from '../Search/Search'
 
 import '../../style/MovieList.css'
 

@@ -9,6 +9,7 @@ const VideoList: React.FunctionComponent = () =>{
 
     useEffect(() => {
         fetchMovieTrailer();
+        fetchTvShowTrailer();
     }, [])
 
     async function fetchMovieTrailer() {
@@ -22,6 +23,18 @@ const VideoList: React.FunctionComponent = () =>{
           });
           setGetVideo(trailer[0]);
         }
+
+        async function fetchTvShowTrailer() {
+          const response = await fetch(
+              `https://api.themoviedb.org/3/tv/${id}/videos?api_key=18efa1c884796c304e2b89592f48fa10`
+            );
+            const data = await response.json();
+  
+            const trailer = data.results?.filter((video) => {
+              return video.type === 'Trailer';
+            });
+            setGetVideo(trailer[0]);
+          }
 
         return (
             <div>

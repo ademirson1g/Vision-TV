@@ -28,10 +28,13 @@ export interface IJsonResposne {
 
 
 const SeriesCard: React.FunctionComponent<IAuthRouteProps> = (props) => {
+    function reload() {
+        window.location.reload();
+      }      
     const { movie } = props;
     const [loading, data, error, request] = useAxios<IJsonResposne>({
         method: "GET",
-        url: "https://api.themoviedb.org/3/tv/popular?api_key=18efa1c884796c304e2b89592f48fa10&language=en-US&page=1",
+        url: "https://api.themoviedb.org/3/tv/top_rated?api_key=18efa1c884796c304e2b89592f48fa10&language=en-US&page=1",
       });
     
       if (loading) return <p>Loading ....</p>;
@@ -43,7 +46,7 @@ const SeriesCard: React.FunctionComponent<IAuthRouteProps> = (props) => {
     return (
         <>
         {data.results.slice(0,10).map(movie => (
-            <div>
+            <div   onClick={reload} >
                 <SkeletonTheme highlightColor="#444">
                     <Skeleton height={300} duration={2} />
                 </SkeletonTheme>
