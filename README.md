@@ -109,7 +109,7 @@ For this project you do not need to do this since this is a test project. You ca
 Clone the project
 
 ```bash
-  git clone https://github.com/ademirson1g/Vision-TV
+  git clone https://github.com/ademirson1g/Vision-TV.git
 ```
 
 Open terminal and install node modules first.
