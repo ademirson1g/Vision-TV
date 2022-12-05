@@ -1,6 +1,5 @@
 import React,{ReactNode} from 'react'
 
-import Skeleton, {SkeletonTheme} from 'react-loading-skeleton'
 import "../../style/Card.css"
 import { Link } from "react-router-dom"
 import { useAxios } from '../../hooks/useAxios';
@@ -48,9 +47,6 @@ const SeriesCard: React.FunctionComponent<IAuthRouteProps> = (props) => {
         <>
         {data.results.slice(0,10).map(movie => (
             <div   onClick={reload} >
-                <SkeletonTheme highlightColor="#444">
-                    <Skeleton height={300} duration={2} />
-                </SkeletonTheme>
                 <Link to={`/tv/${movie.id}`} style={{textDecoration:"none", color:"white"}}>
                 <div className="cards">
                     <img className="cards__img" src={'https://image.tmdb.org/t/p/original' + movie.poster_path} alt="Card Image" />
