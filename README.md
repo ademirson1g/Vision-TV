@@ -6,7 +6,7 @@
   <p>
     An awesome website to search for tv shows and movies.
     <br/>
-    <a href="vision-tv.vercel.app"> <b> Live Link :</b> vision-tv.vercel.app </a>
+    <a href="https://vision-tv.vercel.app/"> <b> Live Link :</b> vision-tv.vercel.app </a>
     <p><b>Important note :</b> I will need to do refactoring and implement search bar design. Ignore the mess it will be refactored and fixed soon.😄</p>
   </p>
   
