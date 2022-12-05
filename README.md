@@ -5,11 +5,13 @@
   
   <p>
     An awesome website to search for tv shows and movies.
+    <br/>
+    <a href="vision-tv.vercel.app"> <b> Live Link :</b> vision-tv.vercel.app </a>
     <p><b>Important note :</b> I will need to do refactoring and implement search bar design. Ignore the mess it will be refactored and fixed soon.😄</p>
   </p>
   
 <h4>
-    <a href="https://github.com/Louis3797/awesome-readme-template/">View Demo</a>
+    <a href="vision-tv.vercel.app">View Demo</a>
   <span> · </span>
     <a href="https://github.com/ademirson1g/Vision-TV/blob/main/README.md">Documentation</a>
   <span> · </span>
@@ -135,4 +137,4 @@ Then start the server with command
 
 Project Link: https://github.com/ademirson1g/Vision-TV.git
 
-Deployment Link:
+Deployment Link: vision-tv.vercel.app
