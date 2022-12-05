@@ -9,7 +9,6 @@
 .headerLeft, .headerRight {
     display: flex;
     align-items: center;
-
 }
 
 a > span{
@@ -26,18 +25,4 @@ a > span:hover {
 .header__icon {
     width: 80px;
     cursor: pointer;
-}
-
-.user__avatar {
-    font-size: 2rem;
-}
-
-.search {
-    background-color: transparent;
-    border: 2px solid;
-    border-radius: 50px;
-    border-radius: 2px solid white;
-    font-family: inherit;
-    font-size: 1.2rem;
-    padding: 0.5rem 1.5rem;
 }

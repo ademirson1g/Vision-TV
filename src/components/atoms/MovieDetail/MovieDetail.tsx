@@ -2,6 +2,7 @@ import React , {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 
 import "../../style/MovieDetail.css"
+import Search from '../Search/Search';
 
 import VideoList from '../VideoList/VideoList';
 
@@ -28,6 +29,7 @@ const MovieDetail: React.FunctionComponent = () => {
       {movieDetail && (
         <>
             {/* Background path */}
+            <div className='fade-in'>
           <div
             className="banner"
             style={{
@@ -96,6 +98,7 @@ const MovieDetail: React.FunctionComponent = () => {
           <div>
             <VideoList />
           </div>
+        </div>
         </>
       )}
     </>

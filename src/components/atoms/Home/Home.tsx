@@ -24,9 +24,9 @@ export interface ITvShowData {
   original_name: string;
   original_language: string;
   overview: string;
-  release_date: number;
   vote_average: number;
   backdrop_path: string;
+  first_air_date: number;
 }
 
 const Home: React.FunctionComponent = () => {
@@ -41,9 +41,10 @@ const Home: React.FunctionComponent = () => {
 
   if (!data) return <p>Data was null</p>;
 
+  
   return (
     <> 
-      <div className="poster">
+      <div className="poster fade-in">
         <Carousel 
           showThumbs={false}
           autoPlay={true}
@@ -59,7 +60,7 @@ const Home: React.FunctionComponent = () => {
               <div className="posterImage__overlay">
                 <div className="posterImage__title">{tvshow.original_name}</div>
                 <div className="posterImage__runtime">
-                  {tvshow.release_date}
+                  {tvshow.first_air_date}
                   <i> <MdOutlineDateRange style={{color:"grey", paddingTop:"12px", position:"relative"}} /></i>
                   <span className="posterImage__rating">
                     {tvshow.vote_average}

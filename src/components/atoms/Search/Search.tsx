@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react';
-import { FaSearch } from 'react-icons/fa';
 import {Link} from 'react-router-dom';
 
 import '../../style/Search.css'
@@ -12,8 +11,11 @@ const Search: React.FunctionComponent = () => {
     const API_KEY = '18efa1c884796c304e2b89592f48fa10';
 
     useEffect( () => {
-        getMoviesByQuery();
-        getSeriesByQuery();
+        const timeout = setTimeout(() => {
+            getMoviesByQuery();
+            getSeriesByQuery();
+        }, 1000)
+        return () => clearTimeout(timeout)
     }, [query]);
     
     async function getSeriesByQuery(){
@@ -31,6 +33,7 @@ const Search: React.FunctionComponent = () => {
             const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`); 
             const data = await response.json();
             setMovieSearch(data.results);
+
         }
         else
             setMovieSearch([]);
@@ -41,28 +44,27 @@ const Search: React.FunctionComponent = () => {
     }
 
     return(
-        <div className="align">
-                <input id="search" name="search" type="text" placeholder='Search...' value={query} onChange={updateQuery} />
-                <div className='form__field'>
-                <FaSearch color='white' />
+        <div>
+            <input type="text" placeholder='Press to Search' value={query} onChange={updateQuery} />
+            <div className='form__field'>
+                {
+                    tvSearch.map(tv => (
+                        <div key={tv.id}>
+                            <Link to={`/tv/${tv.id}`} style={{textDecoration: 'none'}}>
+                                <span style={{color:"white", padding:"5px"}} >{tv.name}</span>
+                            </Link>
+                        </div>
+                ))}
                     {
-                        tvSearch.map(movie => (
-                            <div key={movie.id}>
-                                <Link to={`/tv/${movie.id}`}>
-                                    <p style={{color:"white", fontSize:"12px", padding:"5px", textDecoration:"none"}}>{movie.name}</p>
-                                </Link>
-                            </div>
-                    ))}
-                     {
-                        movieSearch.map(movie => (
-                            <div key={movie.id}>
-                                <Link to={`/movie/${movie.id}`}>
-                                    <p style={{color:"white", fontSize:"12px", padding:"5px", textDecoration:"none"}}>{movie.title}</p>
-                                </Link>
-                            </div>
-                    ))}
-            </div>
+                    movieSearch.map(movie => (
+                        <div key={movie.id} >
+                            <Link to={`/movie/${movie.id}`} style={{textDecoration: 'none'}}>
+                                <span style={{color:"white", padding:"5px"}}>{movie.title}</span>
+                            </Link>
+                        </div>
+                ))}
         </div>
+    </div>
     );
 }
 

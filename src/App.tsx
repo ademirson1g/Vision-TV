@@ -7,12 +7,14 @@ import MovieList from "./components/atoms/MovieList/MoveList";
 import MovieDetail from "./components/atoms/MovieDetail/MovieDetail";
 import SeriesList from "./components/atoms/Series/SeriesList";
 import SeriesDetail from "./components/atoms/SeriesDetail/SeriesDetail";
+import Search from "./components/atoms/Search/Search";
 
 function App() {
   return (
     <div>
       <Router>
         <Header />
+        <Search />
         <Routes>
           <Route
             index

@@ -1,6 +1,5 @@
-import React, {useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
 import Logo from "../../../assets/images/logo.gif"
 import Search from '../Search/Search'
@@ -12,7 +11,7 @@ const Header:React.FunctionComponent = () => {
     <div className="header">
       <div className="headerLeft">
         <Link to="/">  
-          <img className="header__icon" src={Logo} />
+          <img className="header__icon" src={Logo} alt="header_logo" />
         </Link>
         <Link to="/movies/popular" style={{ textDecoration: "none" }}>
           <span>Popular Movies</span>
@@ -20,9 +19,6 @@ const Header:React.FunctionComponent = () => {
         <Link to="/tvs/top_rated" style={{ textDecoration: "none" }}>
           <span>Popular Tv Shows</span>
         </Link>
-        <div style={{marginRight:"25px"}}>
-          <Search />
-        </div>
       </div>
     </div>
   );

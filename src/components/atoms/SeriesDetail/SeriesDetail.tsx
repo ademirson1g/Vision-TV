@@ -1,4 +1,5 @@
 import React , {useEffect, useState} from 'react'
+import { FaStar } from 'react-icons/fa';
 import {useParams} from 'react-router-dom'
 
 import "../../style/MovieDetail.css"
@@ -28,6 +29,7 @@ const SeriesDetail: React.FunctionComponent = () => {
       {movieDetail && (
         <>
             {/* Background path */}
+            <div className='fade-in'>
           <div
             className="banner"
             style={{
@@ -72,22 +74,19 @@ const SeriesDetail: React.FunctionComponent = () => {
 
               <div className="movie__rating">
                 {movieDetail ? movieDetail["vote_average"] : ''}{' '}
-                <i className="fas fa-star" />
+                <i><FaStar style={{color:"yellow"}} /></i>
                 <span className="movie__voteCount">
                   {movieDetail ? '(' + movieDetail["vote_count"] + ') votes' : ''}
                 </span>
               </div>
 
-              <div className="movie__runtime">
-                {movieDetail ? movieDetail["runtime"] + ' mins' : ''}
-              </div>
-
-              <div className="movie__releaseDate">
-                {movieDetail ? 'Release date:' + movieDetail["release_date"] : ''}
+              <div className="movie__releaseDate" style={{marginBottom:"40px"}}>
+                {movieDetail ? 'Release date: ' + movieDetail["first_air_date"] : ''}
               </div>
 
               <div className="movie-overview">
-                <h1 style={{fontSize: '15px'}}>Overview</h1>
+                <h1 style={{fontSize: '40px', marginTop:"40px"}}>Overview</h1>
+                <br />
                 <p className="overview">{movieDetail["overview"]}</p>
               </div>
             </div>
@@ -96,6 +95,7 @@ const SeriesDetail: React.FunctionComponent = () => {
           <div>
             <SeriesVideoList />
           </div>
+      </div>
         </>
       )}
     </>

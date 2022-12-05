@@ -28,9 +28,6 @@ export interface IJsonResposne {
 
 
 const SeriesCard: React.FunctionComponent<IAuthRouteProps> = (props) => {
-    function reload() {
-        window.location.reload();
-      }      
     const { movie } = props;
     const [loading, data, error, request] = useAxios<IJsonResposne>({
         method: "GET",
@@ -46,7 +43,7 @@ const SeriesCard: React.FunctionComponent<IAuthRouteProps> = (props) => {
     return (
         <>
         {data.results.slice(0,10).map(movie => (
-            <div   onClick={reload} >
+            <div>
                 <Link to={`/tv/${movie.id}`} style={{textDecoration:"none", color:"white"}}>
                 <div className="cards">
                     <img className="cards__img" src={'https://image.tmdb.org/t/p/original' + movie.poster_path} alt="Card Image" />
