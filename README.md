@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="assets/logo.png" alt="logo" width="200" height="auto" />
+  <img src="https://github.com/ademirson1g/Vision-TV/blob/main/src/assets/images/logo.gif" alt="logo" width="200" height="auto" />
   <h1>Vision Tv Website</h1>
   
   <p>
@@ -34,13 +34,7 @@
   * [Run Locally](#running-run-locally)
 - [Usage](#eyes-usage)
 - [Roadmap](#compass-roadmap)
-- [Contributing](#wave-contributing)
-  * [Code of Conduct](#scroll-code-of-conduct)
-- [License](#warning-license)
-- [Contact](#handshake-contact)
-- [Acknowledgements](#gem-acknowledgements)
   
-
 <!-- About the Project -->
 ## :star2: About the Project
 
@@ -139,4 +133,5 @@ Then start the server with command
 * [ ] Todo 2
 
 Project Link: https://github.com/ademirson1g/Vision-TV
+
 Deployment Link:
