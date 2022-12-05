@@ -17,6 +17,7 @@ export interface IJsonResposne {
     poster_path: string;
     original_title: string;
     original_language: string;
+    background_path: string;
     overview: string;
     first_air_date: number;
     vote_average: number;

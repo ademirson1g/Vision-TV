@@ -26,10 +26,6 @@ function App() {
             path="movies/:type"
             element={<h1 style={{ color: "white" }}>{< MovieList />}</h1>}
           ></Route>
-          <Route
-            path="/*"
-            element={<h1 style={{ color: "white" }}>Error page not found</h1>}
-          ></Route>
 
           { /* TV Show routes */}
             <Route

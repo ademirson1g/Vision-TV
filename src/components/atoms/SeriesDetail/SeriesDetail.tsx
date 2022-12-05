@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom'
 
 import "../../style/MovieDetail.css"
 
-import VideoList from '../VideoList/VideoList';
+import SeriesVideoList from '../VideoList/SeriesVideoList';
 
 const SeriesDetail: React.FunctionComponent = () => {
     const [movieDetail, setMovie] = useState<any[]>([])
@@ -17,7 +17,7 @@ const SeriesDetail: React.FunctionComponent = () => {
 
   const getData = () => {
     fetch(
-      `https://api.themoviedb.org/3/tv/${id}top_rated?api_key=15adc4cf6388a9d835667a7400191617&language=en-US`
+      `https://api.themoviedb.org/3/tv/${id}?api_key=15adc4cf6388a9d835667a7400191617&language=en-US`
     )
       .then((res) => res.json())
       .then((data) => setMovie(data));
@@ -78,6 +78,14 @@ const SeriesDetail: React.FunctionComponent = () => {
                 </span>
               </div>
 
+              <div className="movie__runtime">
+                {movieDetail ? movieDetail["runtime"] + ' mins' : ''}
+              </div>
+
+              <div className="movie__releaseDate">
+                {movieDetail ? 'Release date:' + movieDetail["release_date"] : ''}
+              </div>
+
               <div className="movie-overview">
                 <h1 style={{fontSize: '15px'}}>Overview</h1>
                 <p className="overview">{movieDetail["overview"]}</p>
@@ -86,7 +94,7 @@ const SeriesDetail: React.FunctionComponent = () => {
           </div>
 
           <div>
-            <VideoList />
+            <SeriesVideoList />
           </div>
         </>
       )}

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from 'react-responsive-carousel'
 
-import MovieList from "../MovieList/MoveList";
+import SeriesList from "../Series/SeriesList";
 
 import { FaStar } from 'react-icons/fa'
 import { MdOutlineDateRange } from 'react-icons/md'
@@ -14,14 +14,14 @@ import "../../style/App.css";
 import "../../style/Home.css";
 
 export interface IJsonResposne {
-  results: IMovieData[];
+  results: ITvShowData[];
   page: number;
 }
 
-export interface IMovieData {
+export interface ITvShowData {
   id:string;
   poster_path: string;
-  original_title: string;
+  original_name: string;
   original_language: string;
   overview: string;
   release_date: number;
@@ -32,7 +32,7 @@ export interface IMovieData {
 const Home: React.FunctionComponent = () => {
   const [loading, data, error, request] = useAxios<IJsonResposne>({
     method: "GET",
-    url: "https://api.themoviedb.org/3/movie/top_rated?api_key=18efa1c884796c304e2b89592f48fa10&language=en-US&page=3",
+    url: "https://api.themoviedb.org/3/tv/top_rated?api_key=18efa1c884796c304e2b89592f48fa10&language=en-US&page=1",
   });
 
   if (loading) return <p>Loading ....</p>;
@@ -51,27 +51,27 @@ const Home: React.FunctionComponent = () => {
           infiniteLoop={true}
           showStatus={false}
           >
-            {data.results.map(movie => (
-              <Link style={{textDecoration:"none", color:"white"}} to={`/movie/${movie.id}`}>
+            {data.results.map(tvshow => (
+              <Link style={{textDecoration:"none", color:"white"}} to={`/tv/${tvshow.id}`}>
               <div className="posterImage">
-                <img src={"https://image.tmdb.org/t/p/original/" + movie.backdrop_path} alt="Image" />
+                <img src={"https://image.tmdb.org/t/p/original/" + tvshow.backdrop_path} alt="Image" />
               </div>
               <div className="posterImage__overlay">
-                <div className="posterImage__title">{movie.original_title}</div>
+                <div className="posterImage__title">{tvshow.original_name}</div>
                 <div className="posterImage__runtime">
-                  {movie.release_date}
+                  {tvshow.release_date}
                   <i> <MdOutlineDateRange style={{color:"grey", paddingTop:"12px", position:"relative"}} /></i>
                   <span className="posterImage__rating">
-                    {movie.vote_average}
+                    {tvshow.vote_average}
                     <i> <FaStar style={{color:"yellow", paddingTop:"12px", position:"relative"}}/> </i>
                   </span>
                 </div>
-                <div className="posterImage__description">{movie.overview}</div>
+                <div className="posterImage__description">{tvshow.overview}</div>
               </div>
               </Link>
             ))}
           </Carousel>
-          <MovieList />
+          <SeriesList />
       </div>
     </>
   );

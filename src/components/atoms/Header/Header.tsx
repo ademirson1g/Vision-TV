@@ -20,8 +20,10 @@ const Header:React.FunctionComponent = () => {
         <Link to="/tvs/top_rated" style={{ textDecoration: "none" }}>
           <span>Popular Tv Shows</span>
         </Link>
+        <div style={{marginRight:"25px"}}>
+          <Search />
+        </div>
       </div>
-      <Search />
     </div>
   );
 };

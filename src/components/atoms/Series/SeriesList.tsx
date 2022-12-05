@@ -35,7 +35,7 @@ export interface IJsonResposne {
     
       return (
         <div className='movie__list'>
-        <h2 className='list__title'>{(type ? type : "Popular").toUpperCase()}</h2>
+        <h2 className='list__title'>{(type ? type : "Popular Tv Shows").toUpperCase()}</h2>
         <div className='list__cards'>
           <SeriesCard />
         </div>
