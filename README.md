@@ -42,7 +42,8 @@
 ## :star2: About the Project
 
 <div align="center"> 
-  <img src="https://prnt.sc/Q9BnTcgrjMdd" alt="screenshot" />
+  <img src="![1](https://user-images.githubusercontent.com/80320950/205673085-b8a40f95-00d6-493d-a400-194023a070fe.png)
+" alt="screenshot" />
   <img src="https://prnt.sc/0vInNfwNNz3S" alt="screenshot" />
   <img src="https://prnt.sc/KVcx9ZED88k7" alt="screenshot" />
   <img src="https://prnt.sc/oqi1j63IWfAl" alt="screenshot" />
