@@ -114,7 +114,7 @@ Clone the project
 
 Open terminal and install node modules first.
 ```bash
- npm install --legacy-peer-deps
+ npm install
 ```
 
 <!-- Run Locally -->
