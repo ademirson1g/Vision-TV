@@ -5,7 +5,7 @@
   
   <p>
     An awesome website to search for tv shows and movies.
-    <h1>Important note : On this project I will need to do refactoring and implement search bar design. Ignore the mess it will be fixed soon.😄</h1>
+    <p><b>Important note :</b> I will need to do refactoring and implement search bar design. Ignore the mess it will be refactored and fixed soon.😄</p>
   </p>
   
 <h4>
@@ -125,6 +125,7 @@ Then start the server with command
 
 ```bash
   For NPM -> npm start
+  Local server -> localhost:3000 
 ```
 
 <!-- Roadmap -->
