@@ -1,47 +1,171 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <img src="assets/logo.png" alt="logo" width="200" height="auto" />
+  <h1>Vision Tv Website</h1>
+  
+  <p>
+    An awesome website to search for tv shows and movies.
+  </p>
 
-## Available Scripts
+  
+<!-- Badges -->
+<p>
+  <a href="https://github.com/Louis3797/awesome-readme-template/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/Louis3797/awesome-readme-template" alt="contributors" />
+  </a>
+  <a href="">
+    <img src="https://img.shields.io/github/last-commit/Louis3797/awesome-readme-template" alt="last update" />
+  </a>
+  <a href="https://github.com/Louis3797/awesome-readme-template/network/members">
+    <img src="https://img.shields.io/github/forks/Louis3797/awesome-readme-template" alt="forks" />
+  </a>
+  <a href="https://github.com/Louis3797/awesome-readme-template/stargazers">
+    <img src="https://img.shields.io/github/stars/Louis3797/awesome-readme-template" alt="stars" />
+  </a>
+  <a href="https://github.com/Louis3797/awesome-readme-template/issues/">
+    <img src="https://img.shields.io/github/issues/Louis3797/awesome-readme-template" alt="open issues" />
+  </a>
+  <a href="https://github.com/Louis3797/awesome-readme-template/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/Louis3797/awesome-readme-template.svg" alt="license" />
+  </a>
+</p>
+   
+<h4>
+    <a href="https://github.com/Louis3797/awesome-readme-template/">View Demo</a>
+  <span> · </span>
+    <a href="https://github.com/Louis3797/awesome-readme-template">Documentation</a>
+  <span> · </span>
+    <a href="https://github.com/Louis3797/awesome-readme-template/issues/">Report Bug</a>
+  <span> · </span>
+    <a href="https://github.com/Louis3797/awesome-readme-template/issues/">Request Feature</a>
+  </h4>
+</div>
 
-In the project directory, you can run:
+<br />
 
-### `npm start`
+<!-- Table of Contents -->
+# :notebook_with_decorative_cover: Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [About the Project](#star2-about-the-project)
+  * [Tech Stack](#space_invader-tech-stack)
+  * [Features](#dart-features)
+  * [Color Reference](#art-color-reference)
+  * [Environment Variables](#key-environment-variables)
+- [Getting Started](#toolbox-getting-started)
+  * [Prerequisites](#bangbang-prerequisites)
+  * [Installation](#gear-installation)
+  * [Run Locally](#running-run-locally)
+- [Usage](#eyes-usage)
+- [Roadmap](#compass-roadmap)
+- [Contributing](#wave-contributing)
+  * [Code of Conduct](#scroll-code-of-conduct)
+- [License](#warning-license)
+- [Contact](#handshake-contact)
+- [Acknowledgements](#gem-acknowledgements)
+  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- About the Project -->
+## :star2: About the Project
 
-### `npm test`
+<div align="center"> 
+  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<!-- TechStack -->
+### :space_invader: Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://www.selenium.dev/">Selenium Java</a></li>
+  </ul>
+</details>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https:https://vercel.com/">Vercel</a></li>
+    
+  </ul>
+</details>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- Features -->
+### :dart: Features
 
-### `npm run eject`
+- Feature 1
+    Search for movies and tv shows. Top 10 rated tv shows will shown , when pressing on the moives tab top 10 movies will be shown.
+- Feature 2
+    Search is interactive having three types to trigger search.
+- Feature 3
+    Youtube video trailers.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<!-- Color Reference -->
+### :art: Color Reference
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Primary Color | ![#222831](https://via.placeholder.com/10/222831?text=+) #222831 |
+| Secondary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
+| Accent Color | ![#00ADB5](https://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
+| Text Color | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<!-- Env Variables -->
+### :key: Environment Variables
 
-## Learn More
+To run this project, you will need to add the following environment variables to your .env file
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`API_KEY`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-# Vision-TV
+`ANOTHER_API_KEY`
+
+For this project you do not need to do this since this is a test project. You can skip this part , or you can add the .env file and change the api key to "process.env.API_KEY".
+
+<!-- Getting Started -->
+## 	:toolbox: Getting Started
+
+<!-- Prerequisites -->
+### :bangbang: Prerequisites
+
+
+<!-- Installation -->
+### :gear: Installation
+
+Clone the project
+
+```bash
+  git clone https://github.com/Louis3797/awesome-readme-template.git
+```
+
+Open terminal and install node modules first.
+```bash
+ npm install --legacy-peer-deps
+```
+
+<!-- Run Locally -->
+### :running: Run Locally
+
+Then start the server with command
+
+```bash
+  For NPM -> npm start
+```
+
+<!-- Roadmap -->
+## :compass: Roadmap
+
+* [x] Todo 1
+* [ ] Todo 2
+
+
+<!-- Contact -->
+## :handshake: Contact
+
+Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+
+Project Link: [https://github.com/Louis3797/awesome-readme-template](https://github.com/Louis3797/awesome-readme-template)
