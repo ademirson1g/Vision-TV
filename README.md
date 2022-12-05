@@ -42,7 +42,11 @@
 ## :star2: About the Project
 
 <div align="center"> 
-  <img alt="screenshot" />
+  <img src="https://prnt.sc/Q9BnTcgrjMdd" alt="screenshot" />
+  <img src="https://prnt.sc/0vInNfwNNz3S" alt="screenshot" />
+  <img src="https://prnt.sc/KVcx9ZED88k7" alt="screenshot" />
+  <img src="https://prnt.sc/oqi1j63IWfAl" alt="screenshot" />
+  <img src="https://prnt.sc/y0HC1HClYxti" alt="screenshot" />
 </div>
 
 <!-- TechStack -->
