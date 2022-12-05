@@ -134,6 +134,6 @@ Then start the server with command
 * [x] Todo 1
 * [ ] Todo 2
 
-Project Link: https://github.com/ademirson1g/Vision-TV
+Project Link: https://github.com/ademirson1g/Vision-TV.git
 
 Deployment Link:
