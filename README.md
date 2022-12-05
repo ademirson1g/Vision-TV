@@ -139,7 +139,7 @@ For this project you do not need to do this since this is a test project. You ca
 Clone the project
 
 ```bash
-  git clone https://github.com/Louis3797/awesome-readme-template.git
+  git clone https://github.com/ademirson1g/Vision-TV
 ```
 
 Open terminal and install node modules first.
