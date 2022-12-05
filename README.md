@@ -5,6 +5,7 @@
   
   <p>
     An awesome website to search for tv shows and movies.
+    <h1>Important note : On this project I will need to do refactoring and implement search bar design. Ignore the mess it will be fixed soon.😄</h1>
   </p>
   
 <h4>
