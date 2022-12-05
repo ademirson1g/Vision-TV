@@ -11,7 +11,7 @@
   </p>
   
 <h4>
-    <a href="vision-tv.vercel.app">View Demo</a>
+    <a href="https://vision-tv.vercel.app/">View Demo</a>
   <span> · </span>
     <a href="https://github.com/ademirson1g/Vision-TV/blob/main/README.md">Documentation</a>
   <span> · </span>
@@ -137,4 +137,4 @@ Then start the server with command
 
 Project Link: https://github.com/ademirson1g/Vision-TV.git
 
-Deployment Link: vision-tv.vercel.app
+Deployment Link: https://vision-tv.vercel.app/
