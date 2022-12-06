@@ -45,8 +45,10 @@ const Search: React.FunctionComponent = () => {
 
     return(
         <div>
-            <input type="text" placeholder='Press to Search' value={query} onChange={updateQuery} />
-            <div className='form__field'>
+            <div style={{borderColor:"white", borderStyle:"double", textAlign:"center" , borderWidth:"50%", borderRadius:"2px", padding:"5px"}}>
+            <input type="text" placeholder='Press to Search' value={query} onChange={updateQuery} style={{width:"100%"}} />
+            </div>
+            <div className='form__field' >
                 {
                     tvSearch.map(tv => (
                         <div key={tv.id}>
