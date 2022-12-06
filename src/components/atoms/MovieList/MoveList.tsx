@@ -25,7 +25,7 @@ export interface IJsonResposne {
     const {type} = useParams()
     const [loading, data, error, request] = useAxios<IJsonResposne>({
         method: "GET",
-        url: `https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=18efa1c884796c304e2b89592f48fa10&language=en-US&page=1`,
+        url: `https://api.themoviedb.org/3/movie/top_rated?api_key=18efa1c884796c304e2b89592f48fa10&language=en-US&page=1`,
       });
     
       if (loading) return <p>Loading ....</p>;
@@ -36,7 +36,7 @@ export interface IJsonResposne {
     
       return (
         <div className='movie__list'>
-        <h2 className='list__title'>{(type ? type : "Popular").toUpperCase()}</h2>
+        <h2 className='list__title'>TOP 10 RATED MOVIES</h2>
         <div className='list__cards'>
           <Cards />
         </div>

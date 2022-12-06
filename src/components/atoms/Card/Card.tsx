@@ -25,9 +25,7 @@ export interface IJsonResposne {
     movie? : ReactNode | undefined;
   }
 
-
-const Cards: React.FunctionComponent<IAuthRouteProps> = (props) => {
-    const { movie } = props;
+const Cards: React.FunctionComponent<IAuthRouteProps> = () => {
     const [loading, data, error, request] = useAxios<IJsonResposne>({
         method: "GET",
         url: "https://api.themoviedb.org/3/movie/top_rated?api_key=18efa1c884796c304e2b89592f48fa10&language=en-US&page=1",
