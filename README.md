@@ -5,11 +5,13 @@
   
   <p>
     An awesome website to search for tv shows and movies.
+    <br/>
+    <a href="https://vision-tv.vercel.app/"> <b> Live Link :</b> vision-tv.vercel.app </a>
     <p><b>Important note :</b> I will need to do refactoring and implement search bar design. Ignore the mess it will be refactored and fixed soon.😄</p>
   </p>
   
 <h4>
-    <a href="https://github.com/Louis3797/awesome-readme-template/">View Demo</a>
+    <a href="https://vision-tv.vercel.app/">View Demo</a>
   <span> · </span>
     <a href="https://github.com/ademirson1g/Vision-TV/blob/main/README.md">Documentation</a>
   <span> · </span>
@@ -40,7 +42,12 @@
 ## :star2: About the Project
 
 <div align="center"> 
-  <img alt="screenshot" />
+  <img src="![1](https://user-images.githubusercontent.com/80320950/205673085-b8a40f95-00d6-493d-a400-194023a070fe.png)
+" alt="screenshot" />
+  <img src="https://prnt.sc/0vInNfwNNz3S" alt="screenshot" />
+  <img src="https://prnt.sc/KVcx9ZED88k7" alt="screenshot" />
+  <img src="https://prnt.sc/oqi1j63IWfAl" alt="screenshot" />
+  <img src="https://prnt.sc/y0HC1HClYxti" alt="screenshot" />
 </div>
 
 <!-- TechStack -->
@@ -109,7 +116,7 @@ For this project you do not need to do this since this is a test project. You ca
 Clone the project
 
 ```bash
-  git clone https://github.com/ademirson1g/Vision-TV
+  git clone https://github.com/ademirson1g/Vision-TV.git
 ```
 
 Open terminal and install node modules first.
@@ -135,4 +142,4 @@ Then start the server with command
 
 Project Link: https://github.com/ademirson1g/Vision-TV.git
 
-Deployment Link:
+Deployment Link: https://vision-tv.vercel.app/
